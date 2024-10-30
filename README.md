@@ -1,5 +1,5 @@
 ## This POS with react still in working progress
-###### Anyway, we gonna add some important command line little by litter as FYI.
+###### Anyway, we gonna add some important command line little by little as FYI.
 
 
 ##### Steps for Project Structures
