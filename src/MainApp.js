@@ -9,7 +9,7 @@ import Sales from './components/Sales';
 import Inventory from './components/Inventory';
 import Customers from './components/Customers';
 import Reports from './components/Reports';
-import { AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemIcon, ListItemText, Avatar, Button, CssBaseline } from '@mui/material';
+import { AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemIcon, ListItemText, Avatar, Button, CssBaseline, Container, Paper, Box } from '@mui/material';
 import { Dashboard, ShoppingCart, Inventory2, People, BarChart } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
@@ -19,7 +19,25 @@ const MainApp = () => {
   const { isAuthenticated, user, loginWithRedirect, logout } = useAuth0();
 
   if (!isAuthenticated) {
-    return <Button variant="contained" color="primary" onClick={() => loginWithRedirect()}>Log In</Button>;
+    return (
+      <Container maxWidth="md" style={{ textAlign: 'center', marginTop: '50px' }}>
+        <Paper elevation={3} style={{ padding: '30px' }}>
+          <Typography variant="h3" gutterBottom>Welcome to Duck Cloud POS Services</Typography>
+          <Typography variant="body1" style={{ marginTop: '20px' }}>
+            Duck Cloud POS is your all-in-one solution for managing sales, inventory, customers, and reports with ease and efficiency. 
+            Our platform is designed to empower business owners with intuitive tools for streamlined operations.
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            style={{ marginTop: '30px' }}
+            onClick={() => loginWithRedirect()}
+          >
+            Get Started
+          </Button>
+        </Paper>
+      </Container>
+    );
   }
 
   return (
