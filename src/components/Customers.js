@@ -1,7 +1,7 @@
 // src/components/Sales.js
 import React from 'react';
 
-const inventory = () => {
+const customers = () => {
   return (
     <div>
       <h2>Sales Section</h2>
@@ -11,4 +11,4 @@ const inventory = () => {
   );
 };
 
-export default inventory;
+export default customers;
